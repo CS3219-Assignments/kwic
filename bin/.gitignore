@@ -14,8 +14,3 @@ hs_err_pid*
 # IDE
 .idea
 /target/
-
-*.classpath
-.project
-*.txt
-*.prefs
