@@ -29,8 +29,17 @@ public class Main {
             inputWordToIgnore = sc.nextLine();
         }
 
+        System.out.println("\"required words\": ");
+        String inputWordToRequire = sc.nextLine();
+        RequiredWords requiredWords = RequiredWords.getWordsRequired();
+        while (!inputWordToRequire.isEmpty()) {
+        	requiredWords.addWordToRequire(inputWordToRequire);
+        	inputWordToRequire = sc.nextLine();
+        }
+        
         Alphabetizer alphabetizer = new Alphabetizer();
         for (String str : inputs) {
+        	
             CircularShift shifter = new CircularShift(str);
             alphabetizer.addLines(shifter.getCircularShifts());
         }

@@ -12,15 +12,18 @@ public class CircularShift {
     public static String DELIMITER = " ";
     private String _line;
     private WordsToIgnore _wordsToIgnore;
+    private RequiredWords _requiredWords; 
 
     /**
      * input should not be null
      * @param line
      */
+
     public CircularShift(String line) {
         assert(line != null);
         this._line = line.toLowerCase();
         this._wordsToIgnore = WordsToIgnore.getWordsToIgnore();
+        this._requiredWords = RequiredWords.getWordsRequired();
     }
 
     public String[] getCircularShifts() {
@@ -32,7 +35,12 @@ public class CircularShift {
             shifts[i] = this.getShiftedLine(i, words);
         }
 
-        String[] filteredShifts = getShiftsWithoutIgnoredWordLeading(shifts);
+        String[] filteredShifts = null;
+        if(!_requiredWords.isEmpty())
+        	filteredShifts = getShiftsWithRequiredWordLeading(shifts);
+        else
+        	filteredShifts = getShiftsWithoutIgnoredWordLeading(shifts);
+        
         for (int i=0;i<filteredShifts.length;i++) {
             filteredShifts[i] = capitalizeWordsNotIgnoredInShift(filteredShifts[i]);
         }
@@ -71,10 +79,26 @@ public class CircularShift {
         return shiftList.toArray(new String[shiftList.size()]);
     }
 
+    private String[] getShiftsWithRequiredWordLeading(String[] shifts) {
+        List<String> shiftList = new ArrayList<String>(Arrays.asList(shifts));
+
+        Iterator<String> iter = shiftList.iterator();
+        while (iter.hasNext()) {
+            if (!isShiftStartingWithRequiredWord(iter.next())) {
+                iter.remove();
+            }
+        }
+
+        return shiftList.toArray(new String[shiftList.size()]);
+    }
     private boolean isShiftStartingWithIgnoredWord(String line) {
-        return this._wordsToIgnore.isWordIgnored(line.split(DELIMITER)[0]);
+    	 return this._wordsToIgnore.isWordIgnored(line.split(DELIMITER)[0]);
     }
 
+    private boolean isShiftStartingWithRequiredWord(String line) {
+        return this._requiredWords.isWordRequired(line.split(DELIMITER)[0]);
+    }
+    
     private String capitalizeWordsNotIgnoredInShift(String shift) {
         String[] words = shift.split(DELIMITER);
         StringBuilder builder = new StringBuilder();

@@ -2,14 +2,9 @@ package test;
 
 import static org.junit.Assert.*;
 
-import java.util.HashSet;
-
-import org.junit.After;
-import org.junit.Before;
 import org.junit.Test;
 
-import CS3213.CircularShift;
-import CS3213.WordsToIgnore;
+import CS3213.RequiredWords;
 
 public class RequiredWordsTest {
 	
