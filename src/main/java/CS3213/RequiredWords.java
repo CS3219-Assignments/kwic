@@ -19,17 +19,17 @@ public class RequiredWords {
 	    }
 	    
 	    public void addWordToRequire(String word) {
-	       // assert(word != null);
-	        //this._requiredWords.add(word);
+	       assert(word != null);
+	       this._requiredWords.add(word);
 	    }
 
 	    public void removeWordToRequire(String word) {
-	        //assert(word != null);
-	        //this._requiredWords.remove(word);
+	        assert(word != null);
+	        this._requiredWords.remove(word);
 	    }
 
 	    public boolean isWordRequired(String word) {
-	       // assert(word != null);
+	        assert(word != null);
 	        return this._requiredWords.contains(word);
 	    }
 
