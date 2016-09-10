@@ -8,14 +8,17 @@ import java.util.List;
 
 import org.junit.Test;
 
+import com.sun.jmx.snmp.internal.SnmpSecuritySubSystem;
+
 import CS3213.Alphabetizer;
 import CS3213.CircularShift;
 import CS3213.RequiredWords;
 import CS3213.WordsToIgnore;
 import javafx.util.converter.ShortStringConverter;
+import sun.print.PSPrinterJob.PluginPrinter;
 
 public class RequiredWordsNotInIgnoreWordsTest {
-	/*
+	
 	@Test
 	public void testRequiredWordsNotInIgnoreWords(){
 	
@@ -48,16 +51,11 @@ public class RequiredWordsNotInIgnoreWordsTest {
        
 	    
 	    wordsToIgnore.removeWordToIgnore("pikachu");
-	    
-	    for (String requireWords: inputWordToRequire){
-	    	if(!wordsToIgnore.isWordIgnored(requireWords)){
-	    		requiredWords.removeWordToRequire(requireWords); 
-	    	}
-	    }
-	    
+	        
 	    for (String str: outputs){
 	    	alphabetizer.removeLines(str);
 	    }
+	 
 	}
-	*/
+	
 }
