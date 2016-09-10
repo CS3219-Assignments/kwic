@@ -12,7 +12,6 @@ public class RequiredWordsTest {
 	
         assertFalse(requiredWords.isWordRequired("Hello"));
        
-        assertTrue(requiredWords.isEmpty());
         requiredWords.addWordToRequire("World");
         requiredWords.addWordToRequire("Great");
         assertTrue(requiredWords.isWordRequired("World"));
