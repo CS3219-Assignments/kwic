@@ -51,7 +51,13 @@ public class RequiredWordsNotInIgnoreWordsTest {
        
 	    
 	    wordsToIgnore.removeWordToIgnore("pikachu");
-	        
+	    
+	    for (String requireWords: inputWordToRequire){
+	    	if(!wordsToIgnore.isWordIgnored(requireWords)){
+	    		requiredWords.removeWordToRequire(requireWords);
+	    	}
+	    }
+	    
 	    for (String str: outputs){
 	    	alphabetizer.removeLines(str);
 	    }
