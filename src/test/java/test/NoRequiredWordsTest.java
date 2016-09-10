@@ -22,7 +22,7 @@ public class NoRequiredWordsTest {
 		inputs.add("Harry Potter and the Goblet of fire");
 		
 		WordsToIgnore wordsToIgnore = WordsToIgnore.getWordsToIgnore();
-		wordsToIgnore.addWordToIgnore("the");
+		wordsToIgnore.addWordToIgnore("and");
 	    wordsToIgnore.addWordToIgnore("of");
 	    
 	    RequiredWords requiredWords = RequiredWords.getWordsRequired();
@@ -45,10 +45,10 @@ public class NoRequiredWordsTest {
         String[] output = alphabetizer.getSortedLines();
         
         assertTrue(output.length == 5);
-        assertEquals("And the Goblet of Fire Harry Potter", output[0]);
-        assertEquals("Fire Harry Potter And the Goblet of", output[1]);
-        assertEquals("Goblet of Fire Harry Potter And the", output[2]);
-        assertEquals("Harry Potter And the Goblet of Fire", output[3]);
-        assertEquals("Potter And the Goblet of Fire Harry", output[4]);
+        assertEquals("Fire Harry Potter and The Goblet of", output[0]);
+        assertEquals("Goblet of Fire Harry Potter and The", output[1]);
+        assertEquals("Harry Potter and The Goblet of Fire", output[2]);
+        assertEquals("Potter and The Goblet of Fire Harry", output[3]);
+        assertEquals("The Goblet of Fire Harry Potter and", output[4]);
 	}
 }
