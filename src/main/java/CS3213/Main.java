@@ -29,7 +29,7 @@ public class Main {
             inputWordToIgnore = sc.nextLine();
         }
 
-        System.out.println("\"required words\": ");
+        System.out.println("Enter required words (terminate input by entering empty line) ");
         String inputWordToRequire = sc.nextLine();
         RequiredWords requiredWords = RequiredWords.getWordsRequired();
         while (!inputWordToRequire.isEmpty()) {
