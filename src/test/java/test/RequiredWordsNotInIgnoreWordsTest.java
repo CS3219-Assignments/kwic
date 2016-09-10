@@ -19,15 +19,14 @@ public class RequiredWordsNotInIgnoreWordsTest {
 	public void testRequiredWordsNotInIgnoreWords(){
 	
 		List<String> inputs = new ArrayList<String>();
-		inputs.add("Harry Potter and the Goblet of fire");
+		inputs.add("Pikachu is not a rat");
 		
 		WordsToIgnore wordsToIgnore = WordsToIgnore.getWordsToIgnore();
-		wordsToIgnore.addWordToIgnore("potter");
-	    wordsToIgnore.addWordToIgnore("harry");
+		wordsToIgnore.addWordToIgnore("pikachu");
 	    
 	    RequiredWords requiredWords = RequiredWords.getWordsRequired();
 	    
-	    String[] inputWordToRequire = {"potter", "fire"};
+	    String[] inputWordToRequire = {"pikachu", "rat"};
 	   
 	    for (String requireWords: inputWordToRequire){
 	    	if(!wordsToIgnore.isWordIgnored(requireWords)){
@@ -44,6 +43,6 @@ public class RequiredWordsNotInIgnoreWordsTest {
         
         String[] output = alphabetizer.getSortedLines();
         
-        assertEquals("Fire harry potter And The Goblet Of", output[0]);    
+        assertEquals("Rat pikachu Is Not A", output[0]);    
 	}
 }
