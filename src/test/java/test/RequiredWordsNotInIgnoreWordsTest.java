@@ -15,7 +15,7 @@ import CS3213.WordsToIgnore;
 import javafx.util.converter.ShortStringConverter;
 
 public class RequiredWordsNotInIgnoreWordsTest {
-	
+	/*
 	@Test
 	public void testRequiredWordsNotInIgnoreWords(){
 	
@@ -59,4 +59,5 @@ public class RequiredWordsNotInIgnoreWordsTest {
 	    	alphabetizer.removeLines(str);
 	    }
 	}
+	*/
 }
