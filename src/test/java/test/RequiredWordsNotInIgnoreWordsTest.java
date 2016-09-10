@@ -49,7 +49,7 @@ public class RequiredWordsNotInIgnoreWordsTest {
         
         assertEquals("Rat pikachu Is Not A", outputs[0]);    
        
-	    /*
+	    
 	    wordsToIgnore.removeWordToIgnore("pikachu");
 	    
 	    for (String requireWords: inputWordToRequire){
@@ -61,7 +61,7 @@ public class RequiredWordsNotInIgnoreWordsTest {
 	    for (String str: outputs){
 	    	alphabetizer.removeLines(str);
 	    }
-	 	*/
+	 
 	}
 	
 }
