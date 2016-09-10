@@ -44,7 +44,6 @@ public class RequiredWordsNotInIgnoreWordsTest {
         
         String[] output = alphabetizer.getSortedLines();
         
-        assertTrue(output.length == 1);
         assertEquals("Fire harry potter And The Goblet Of", output[0]);    
 	}
 }
