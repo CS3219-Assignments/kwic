@@ -50,14 +50,14 @@ public class NoRequiredWordsTest {
         assertEquals("Potter and The Goblet of Fire Harry", outputs[3]);
         assertEquals("The Goblet of Fire Harry Potter and", outputs[4]);
         
-        /*
+        
         wordsToIgnore.removeWordToIgnore("and"); 
 	    wordsToIgnore.removeWordToIgnore("of");
 	    
 	    for (String str: outputs){
 	    	 alphabetizer.removeLines(str);
 	    }
-	    */
+	    
 	}
 	
 }
