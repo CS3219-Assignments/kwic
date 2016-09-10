@@ -24,4 +24,8 @@ public class Alphabetizer {
         Collections.sort(this._lines);
         return this._lines.toArray(new String[this._lines.size()]);
     }
+    
+    public void removeLines(String str){   	
+        this._lines.remove(str);
+    }
 }
