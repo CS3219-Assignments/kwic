@@ -1,21 +1,22 @@
 package test;
 
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.Test;
+
 import CS3213.Alphabetizer;
 import CS3213.CircularShift;
 import CS3213.RequiredWords;
 import CS3213.WordsToIgnore;
 
-import org.junit.Test;
-
-import static org.junit.Assert.*;
-
-import java.util.ArrayList;
-import java.util.List;
-
-public class MainTest {
+public class NoRequireWordsTest {
 	
 	@Test
-	public void TestRequireWordsNotInIgnoreWords(){
+	public void TestNoRequireWords(){
 	
 		List<String> inputs = new ArrayList<String>();
 		inputs.add("Harry Potter and the Goblet of fire");
@@ -26,7 +27,7 @@ public class MainTest {
 	    
 	    RequiredWords requiredWords = RequiredWords.getWordsRequired();
 	    
-	    String[] inputWordToRequire = {"the", "fire"};
+	    String[] inputWordToRequire = {};
 	   
 	    for (String requireWords: inputWordToRequire){
 	    	if(!wordsToIgnore.isWordIgnored(requireWords)){
@@ -43,7 +44,13 @@ public class MainTest {
         
         String[] output = alphabetizer.getSortedLines();
         
-        assertTrue(output.length == 1);
-        assertEquals("Fire Harry Potter And the Goblet of", output[0]);    
+        assertTrue(output.length == 5);
+        assertEquals("And the Goblet of Fire Harry Potter", output[0]);
+        assertEquals("Fire Harry Potter And the Goblet of", output[1]);
+        assertEquals("Goblet of Fire Harry Potter And the", output[2]);
+        assertEquals("Harry Potter And the Goblet of Fire", output[3]);
+        assertEquals("Potter And the Goblet of Fire Harry", output[4]);
 	}
+	
+	
 }
