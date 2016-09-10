@@ -29,4 +29,5 @@ public class RequiredWordsTest {
         
         assertFalse(requiredWords.isEmpty());
 	}
+	
 }
