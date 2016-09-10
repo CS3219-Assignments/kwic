@@ -13,10 +13,10 @@ import CS3213.CircularShift;
 import CS3213.RequiredWords;
 import CS3213.WordsToIgnore;
 
-public class RequireWordsNotIgnoreWordsTest {
+public class RequiredWordsNotInIgnoreWordsTest {
 	
 	@Test
-	public void TestRequireWordsNotInIgnoreWords(){
+	public void testRequiredWordsNotInIgnoreWords(){
 	
 		List<String> inputs = new ArrayList<String>();
 		inputs.add("Harry Potter and the Goblet of fire");

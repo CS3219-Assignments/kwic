@@ -13,10 +13,10 @@ import CS3213.CircularShift;
 import CS3213.RequiredWords;
 import CS3213.WordsToIgnore;
 
-public class NoRequireWordsTest {
+public class NoRequiredWordsTest {
 	
 	@Test
-	public void TestNoRequireWords(){
+	public void testNoRequiredWords(){
 	
 		List<String> inputs = new ArrayList<String>();
 		inputs.add("Harry Potter and the Goblet of fire");
@@ -51,5 +51,4 @@ public class NoRequireWordsTest {
         assertEquals("Harry Potter And the Goblet of Fire", output[3]);
         assertEquals("Potter And the Goblet of Fire Harry", output[4]);
 	}
-	
 }
