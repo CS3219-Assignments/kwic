@@ -12,22 +12,22 @@ public class RequiredWordsTest {
 	
         assertFalse(requiredWords.isWordRequired("Hello"));
        
+        assertTrue(requiredWords.isEmpty());
         requiredWords.addWordToRequire("World");
         requiredWords.addWordToRequire("Great");
-        requiredWords.addWordToRequire("");
         assertTrue(requiredWords.isWordRequired("World"));
-        assertTrue(requiredWords.isWordRequired("Great"));
-        assertTrue(requiredWords.isWordRequired(""));
+        assertTrue(requiredWords.isWordRequired("Great")); 
         assertFalse(requiredWords.isWordRequired("great"));
         assertFalse(requiredWords.isWordRequired("Movie"));
         
         requiredWords.addWordToRequire("great");
         requiredWords.addWordToRequire("after");
         requiredWords.removeWordToRequire("Great");
-        requiredWords.removeWordToRequire("");
         assertFalse(requiredWords.isWordRequired("Great"));
         assertTrue(requiredWords.isWordRequired("great"));
         assertFalse(requiredWords.isWordRequired(""));
-        assertTrue(requiredWords.isWordRequired("after"));    
+        assertTrue(requiredWords.isWordRequired("after"));   
+        
+        assertFalse(requiredWords.isEmpty());
 	}
 }
