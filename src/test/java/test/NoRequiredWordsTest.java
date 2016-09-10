@@ -44,7 +44,6 @@ public class NoRequiredWordsTest {
         
         String[] output = alphabetizer.getSortedLines();
         
-        assertTrue(output.length == 5);
         assertEquals("Fire Harry Potter and The Goblet of", output[0]);
         assertEquals("Goblet of Fire Harry Potter and The", output[1]);
         assertEquals("Harry Potter and The Goblet of Fire", output[2]);
