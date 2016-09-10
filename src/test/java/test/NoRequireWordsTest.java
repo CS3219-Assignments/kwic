@@ -52,5 +52,4 @@ public class NoRequireWordsTest {
         assertEquals("Potter And the Goblet of Fire Harry", output[4]);
 	}
 	
-	
 }
