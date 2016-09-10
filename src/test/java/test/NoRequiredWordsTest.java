@@ -14,7 +14,7 @@ import CS3213.RequiredWords;
 import CS3213.WordsToIgnore;
 
 public class NoRequiredWordsTest {
-	/*
+	
 	@Test
 	public void testNoRequiredWords(){
 	
@@ -58,7 +58,7 @@ public class NoRequiredWordsTest {
 	    	 alphabetizer.removeLines(str);
 	    }
 	}
-	*/
+	
 }
 
 
