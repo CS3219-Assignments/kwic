@@ -18,19 +18,14 @@ public class CircularShiftTest {
         CircularShift circularShit = new CircularShift("tEst this Circular shIft");
         String[] shifts = circularShit.getCircularShifts();
         
-        ArrayList<String> testSet = new ArrayList<String>();
+       
         
-        for (String str : shifts) {
-            testSet.add(str);
-        }
-        assertTrue(testSet.contains("Test This Circular Shift"));
         
-        /*
         HashSet<String> testSet = new HashSet<String>();
         for (String str : shifts) {
             testSet.add(str);
         }
-      
+        /*
         assertTrue(testSet.size() == 4);
         
         assertTrue(testSet.contains("Test This Circular Shift"));
