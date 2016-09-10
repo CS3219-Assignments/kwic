@@ -9,7 +9,7 @@ import CS3213.CircularShift;
 import java.util.HashSet;
 
 public class CircularShiftTest {
-	/*
+	
     @Test
     public void testGetCircularShifts() throws Exception {
         CircularShift circularShit = new CircularShift("tEst this Circular shIft");
@@ -18,11 +18,13 @@ public class CircularShiftTest {
         for (String str : shifts) {
             testSet.add(str);
         }
-        //assertTrue(testSet.size() == 4);
+        /*
+        assertTrue(testSet.size() == 4);
         assertTrue(testSet.contains("Test This Circular Shift"));
         assertTrue(testSet.contains("This Circular Shift Test"));
         assertTrue(testSet.contains("Circular Shift Test This"));
         assertTrue(testSet.contains("Shift Test This Circular"));
+        */
     }
-    */
+    
 }
