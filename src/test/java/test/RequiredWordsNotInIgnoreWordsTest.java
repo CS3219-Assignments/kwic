@@ -12,6 +12,7 @@ import CS3213.Alphabetizer;
 import CS3213.CircularShift;
 import CS3213.RequiredWords;
 import CS3213.WordsToIgnore;
+import javafx.util.converter.ShortStringConverter;
 
 public class RequiredWordsNotInIgnoreWordsTest {
 	
@@ -33,7 +34,7 @@ public class RequiredWordsNotInIgnoreWordsTest {
 	    		requiredWords.addWordToRequire(requireWords);
 	    	}
 	    }
-	    /*
+	    
 	    Alphabetizer alphabetizer = new Alphabetizer();
         for (String str : inputs) {
         	
@@ -41,10 +42,10 @@ public class RequiredWordsNotInIgnoreWordsTest {
             alphabetizer.addLines(shifter.getCircularShifts());
         }
         
-        String[] output = alphabetizer.getSortedLines();
+        String[] outputs = alphabetizer.getSortedLines();
         
-        assertEquals("Rat pikachu Is Not A", output[0]);    
-        */
+        assertEquals("Rat pikachu Is Not A", outputs[0]);    
+       
 	    
 	    wordsToIgnore.removeWordToIgnore("pikachu");
 	    
@@ -52,6 +53,10 @@ public class RequiredWordsNotInIgnoreWordsTest {
 	    	if(!wordsToIgnore.isWordIgnored(requireWords)){
 	    		requiredWords.removeWordToRequire(requireWords); 
 	    	}
+	    }
+	    
+	    for (String str: outputs){
+	    	alphabetizer.removeLines(str);
 	    }
 	}
 }

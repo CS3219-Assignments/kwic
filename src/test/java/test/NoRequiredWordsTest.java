@@ -42,16 +42,20 @@ public class NoRequiredWordsTest {
             alphabetizer.addLines(shifter.getCircularShifts());
         }
         
-        String[] output = alphabetizer.getSortedLines();
+        String[] outputs = alphabetizer.getSortedLines();
         
-        assertEquals("Fire Harry Potter and The Goblet of", output[0]);
-        assertEquals("Goblet of Fire Harry Potter and The", output[1]);
-        assertEquals("Harry Potter and The Goblet of Fire", output[2]);
-        assertEquals("Potter and The Goblet of Fire Harry", output[3]);
-        assertEquals("The Goblet of Fire Harry Potter and", output[4]);
+        assertEquals("Fire Harry Potter and The Goblet of", outputs[0]);
+        assertEquals("Goblet of Fire Harry Potter and The", outputs[1]);
+        assertEquals("Harry Potter and The Goblet of Fire", outputs[2]);
+        assertEquals("Potter and The Goblet of Fire Harry", outputs[3]);
+        assertEquals("The Goblet of Fire Harry Potter and", outputs[4]);
         
         wordsToIgnore.removeWordToIgnore("and"); 
 	    wordsToIgnore.removeWordToIgnore("of");
+	    
+	    for (String str: outputs){
+	    	 alphabetizer.removeLines(str);
+	    }
 	}
 }
 
