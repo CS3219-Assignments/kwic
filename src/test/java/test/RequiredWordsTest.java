@@ -1,9 +1,7 @@
 package test;
 
 import static org.junit.Assert.*;
-
 import org.junit.Test;
-
 import CS3213.RequiredWords;
 
 public class RequiredWordsTest {
@@ -11,27 +9,25 @@ public class RequiredWordsTest {
 	@Test
 	public void testIsWordRequired() {
 		RequiredWords requiredWords = RequiredWords.getWordsRequired();
-
-        assertFalse(requiredWords.isWordRequired("the"));
-
-        requiredWords.addWordToRequire("the");
-        requiredWords.addWordToRequire("of");
+	
+        assertFalse(requiredWords.isWordRequired("Hello"));
+       
+        requiredWords.addWordToRequire("World");
+        requiredWords.addWordToRequire("Great");
         requiredWords.addWordToRequire("");
-        assertTrue(requiredWords.isWordRequired("the"));
-        assertTrue(requiredWords.isWordRequired("of"));
+        assertTrue(requiredWords.isWordRequired("World"));
+        assertTrue(requiredWords.isWordRequired("Great"));
         assertTrue(requiredWords.isWordRequired(""));
-        assertFalse(requiredWords.isWordRequired("after"));
-        assertFalse(requiredWords.isWordRequired("before"));
-
-        requiredWords.addWordToRequire("of"); // add duplicated word
+        assertFalse(requiredWords.isWordRequired("great"));
+        assertFalse(requiredWords.isWordRequired("Movie"));
+        
+        requiredWords.addWordToRequire("great");
         requiredWords.addWordToRequire("after");
-        requiredWords.removeWordToRequire("the");
+        requiredWords.removeWordToRequire("Great");
         requiredWords.removeWordToRequire("");
-        assertFalse(requiredWords.isWordRequired("the"));
-        assertTrue(requiredWords.isWordRequired("of"));
+        assertFalse(requiredWords.isWordRequired("Great"));
+        assertTrue(requiredWords.isWordRequired("great"));
         assertFalse(requiredWords.isWordRequired(""));
-        assertTrue(requiredWords.isWordRequired("after"));
-        assertFalse(requiredWords.isWordRequired("before"));
+        assertTrue(requiredWords.isWordRequired("after"));    
 	}
-
 }
