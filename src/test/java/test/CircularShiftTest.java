@@ -15,11 +15,12 @@ public class CircularShiftTest {
         CircularShift circularShit = new CircularShift("tEst this Circular shIft");
         String[] shifts = circularShit.getCircularShifts();
         HashSet<String> testSet = new HashSet<String>();
+        
+        System.out.println(shifts.length);
         for (String str : shifts) {
             testSet.add(str);
         }
         
-        System.out.println(testSet);
         /*
         assertTrue(testSet.size() == 4);
         assertTrue(testSet.contains("Test This Circular Shift"));
