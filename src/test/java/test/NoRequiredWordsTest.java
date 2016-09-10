@@ -34,7 +34,7 @@ public class NoRequiredWordsTest {
 	    		requiredWords.addWordToRequire(requireWords);
 	    	}
 	    }
-	    /*
+	    
 	    Alphabetizer alphabetizer = new Alphabetizer();
         for (String str : inputs) {
         	
@@ -49,7 +49,9 @@ public class NoRequiredWordsTest {
         assertEquals("Harry Potter and The Goblet of Fire", output[2]);
         assertEquals("Potter and The Goblet of Fire Harry", output[3]);
         assertEquals("The Goblet of Fire Harry Potter and", output[4]);
-        */
+        
+        wordsToIgnore.removeWordToIgnore("and"); 
+	    wordsToIgnore.removeWordToIgnore("of");
 	}
 }
 
