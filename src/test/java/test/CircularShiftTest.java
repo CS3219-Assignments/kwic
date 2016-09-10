@@ -18,6 +18,8 @@ public class CircularShiftTest {
         for (String str : shifts) {
             testSet.add(str);
         }
+        
+        System.out.println(testSet);
         /*
         assertTrue(testSet.size() == 4);
         assertTrue(testSet.contains("Test This Circular Shift"));
