@@ -33,7 +33,9 @@ public class Main {
         String inputWordToRequire = sc.nextLine();
         RequiredWords requiredWords = RequiredWords.getWordsRequired();
         while (!inputWordToRequire.isEmpty()) {
-        	requiredWords.addWordToRequire(inputWordToRequire);
+        	if(!wordsToIgnore.isWordIgnored(inputWordToRequire)){
+        		requiredWords.addWordToRequire(inputWordToRequire);
+        	}
         	inputWordToRequire = sc.nextLine();
         }
         
